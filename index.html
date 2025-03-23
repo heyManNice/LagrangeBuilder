@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拉格朗日插值法函数构造器</title>
+    <script src="./js/math.js"></script>
+    <script src="./js/katex.min.js"></script>
+    <script src="./js/sweetalert2@11.js"></script>
+    <link rel="stylesheet" href="./css/pico.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <nav style="padding: 0 2rem;">
+        <ul>
+            <li
+            class = "responsive-content"
+            full="拉格朗日插值法函数构造器"
+            short="插值函数构造器"
+            style="
+                font-weight: bold;
+                font-size: 1.2rem;
+            "
+            ></li>
+        </ul>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Github</a></li>
+        </ul>
+    </nav>
+    <main class="container" style="padding: 0 2rem;">
+        <article class="inputGroup">
+            <fieldset class = "responsive-content" full="输入形式：" short="式:">
+                <input title="linear" type="radio" id="linear" value="linearInput" name="inputForm" checked />
+                <label for="linear">线性输入</label>
+                <input title="custom" type="radio" id="custom" value="customInput" name="inputForm" />
+                <label for="custom">自定义点</label>
+            </fieldset>
+            <p  class="linearInputTitle"
+                style="
+                    margin: 1rem;
+                    text-align: center;
+                    font-size: 2rem;
+                "
+            >找规律</p>
+            <div class="linearInput"></div>
+            <div class="customInput">
+                <p>使用英文逗号分割x和y。使用空格区分不同的点</p>
+                <textarea name="" id="" placeholder="示例：0,2 2,2 3,2"></textarea>
+            </div>
+            <div class="controller">
+                <button onclick="lb.process();" class="process" aria-busy="false">求解</button>
+            </div>
+        </article>
+        <p id="latex"></p>
+        <article class="answer">
+
+        </article>
+    </main>
+</body>
+</html>

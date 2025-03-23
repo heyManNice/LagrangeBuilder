@@ -1,0 +1,107 @@
+@media (min-width: 767px) {
+    /* 电脑样式 */
+    .responsive-content::before{
+        content: attr(full);
+        white-space: nowrap;
+    }
+}
+@media (max-width: 767px) {
+    /* 手机样式 */
+    .responsive-content::before{
+        content: attr(short);
+        white-space: nowrap;
+    }
+}
+.inputGroup{
+    padding: 1rem;
+    margin: 0;
+    position: relative;
+}
+.linearInput{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.linearInput > input{
+    width: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+.controller{
+    text-align: center;
+    margin-top: 2rem;
+}
+.controller > button{
+    width: fit-content;
+    display: inline-block;
+}
+.customInput{
+    display: none;
+}
+input.invalid{
+    border-color: red;
+}
+.answer p{
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+p > span {
+    display: block;
+    margin: 0 auto;
+    width: 5rem;
+    overflow: visible;
+    padding: 1rem 0;
+}
+p > span > .katex{
+    display: block;
+    width: fit-content;
+}
+math{
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+}
+
+.answerValue{
+    margin: 1rem auto;
+    padding: 1rem;
+    color: rgb(76, 152, 0);
+    font-size: 3rem;
+    border: 2px solid #757575;
+    display: block;
+    width: fit-content; 
+}
+
+
+::-webkit-scrollbar {
+    margin-top: 20px;
+    width: 4px; /* 滚动条宽度 */
+    height: 4px; /* 滚动条高度（水平滚动条） */
+}
+
+::-webkit-scrollbar-track {
+    background: #75757566; /* 滚动条轨道背景颜色 */
+    border-radius: 4px; /* 圆角 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #757575; /* 滚动条滑块颜色 */
+    border-radius: 4px; /* 圆角 */
+}
+
+.answer > .btn{
+   margin: 1rem 0; 
+   display: block;
+   text-align: center;
+}
+
+.answer > .btn > button{
+    display: inline-block;
+    width: 10rem;
+}
