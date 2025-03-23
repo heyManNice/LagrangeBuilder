@@ -360,10 +360,4 @@ class LagrangeBuilder{
     }
 }
 const lb = new LagrangeBuilder();
-const points = [
-    {x: 0, y: 2},
-    {x: 1, y: 3},
-    {x: 2, y: 4},
-    {x: 3, y: 114514},
-    {x: 4, y: 6}
-];
+
